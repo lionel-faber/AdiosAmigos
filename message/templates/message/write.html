@@ -11,7 +11,7 @@
 
 <form action="{% url 'submit' item.id %}" method="post">
 {% csrf_token %}
-    <input name="msg" id="who" type="textbox"/><br>
+    <textarea name="msg" id="who" rows="5" cols="110"></textarea><br>
 <input  type="submit" value="Submit" />
 </form>
 </body>
