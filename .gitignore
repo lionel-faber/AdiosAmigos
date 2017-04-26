@@ -1,0 +1,6 @@
+*.sublime-workspace
+*.sublime-project
+*.log
+*.sqlite3
+local_settings.py
+*.pyc
