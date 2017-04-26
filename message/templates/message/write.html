@@ -9,11 +9,10 @@
 <body>
 <h3 id="maintitle">Would you like to say something to {{ item.name }}?</h3>
 
-<form action="{% url 'submit' %}" method="post">
+<form action="{% url 'submit' item.id %}" method="post">
 {% csrf_token %}
-    <input type="text" name="who" id="who">
-    <input name="msg" id="msg" value="{{ item.name}}" type="hidden"/><br>
-<input id="sb" type="submit" value="Submit" />
+    <input name="msg" id="who" type="textbox"/><br>
+<input  type="submit" value="Submit" />
 </form>
 </body>
 </html>

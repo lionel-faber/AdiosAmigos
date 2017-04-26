@@ -5,7 +5,7 @@ from .models import List, Bubye
 
 
 def index(request):
-    final_list = List.objects.order_by('id')[:5]
+    final_list = List.objects.all()
     context = {'final_list': final_list}
     return render(request, 'message/index.html', context)
 
@@ -14,9 +14,9 @@ def detail(request, num):
     context = {'item': item}
     return render(request, 'message/write.html', context)
 
-def submit(request):
-    n = request.POST['who']
-    t = request.POST['msg']
-    submission = Bubye(recv = n, text = t)
+def submit(request,num):
+    message = request.POST['msg']
+    alumini = List.objects.get(id=num)
+    submission = Bubye(alumini = alumini, message = message)
     submission.save()
     return render(request, 'message/thankyou.html')

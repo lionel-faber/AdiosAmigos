@@ -6,7 +6,7 @@ class List(models.Model):
         return self.name
 
 class Bubye(models.Model):
-    recv = models.CharField(max_length=50)
-    text = models.CharField(max_length=5000)
+    alumini = models.ForeignKey(List,on_delete=models.CASCADE)
+    message = models.TextField(max_length=5000)
     def __str__(self):
-        return self.text
+        return 'message of {}--- {}'.format(self.alumini.name,self.message)
