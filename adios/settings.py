@@ -25,10 +25,7 @@ SECRET_KEY = '0$29ob)*eul=5t3e6958sw-(m*ejipn4eq=0t29-_)3h)mwjr@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '192.168.1.7',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = ['lionel1704.pythonanywhere.com']
 
 
 # Application definition
@@ -121,4 +118,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/home/lionel1704/AdiosAmigos/message/static/'
+STATIC_ROOT = '/home/lionel1704/AdiosAmigos/message/static/'
