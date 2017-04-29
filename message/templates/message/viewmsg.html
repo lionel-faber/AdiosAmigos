@@ -9,7 +9,13 @@ Thank you!
 </title>
 </head>
 <body>
-<h3 id="maintitle">Thank You! Go ahead and write another message if you wish :)</h3>
-<a href = "/message" >Write another message</a>
+<h3 id="maintitle">Dear {{ nam.name }},<br/><br/> It's hard to say Goodbye,<br/>But the 'good' in it is,</br>A promise of something better :)</h3>
+<div id="items">
+Here are a few heartfelt wishes from your loving juniors.
+{% for message in messages %}
+  <p> {{ message.message }}</p>
+{% endfor %}
+We will miss you :')
+</div>
 </body>
 </html>

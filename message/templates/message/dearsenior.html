@@ -10,13 +10,12 @@
 </head>
 <body>
   <div id="maintitle">
-    Hey Guys!<br>As our final years finish their jounery and move on to the next stage of their lives let us share with them our good wishes. You can choose whoever you'd like to send a message to. Your identity will not be revealed :) unless you include your name in the message :P So please share your thoughts :D
+    Dear Seniors,<br>As you finish your jounery and move on to the next stage of your lives, we'd like to share our good wishes with you. Click on your name in the list below and login to view the wishes of your loving juniors :)
   </div>
 {% if final_list %}
   <div id="items">
     <table align="center"><tr>
     {% for item in final_list %}
-        <td><a href="{{ item.id }}">{{ item.username }}</a></td></tr>
         <td><a href="{{ item.id }}">{{ item.name }}</a></td>
         {% if forloop.last %}
           </tr>

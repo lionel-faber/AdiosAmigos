@@ -15,7 +15,8 @@ class BubyeAdmin(admin.ModelAdmin):
 		return obj.alumini.username
     get_name.admin_order_field = 'alumni'	
     get_name.short_description = 'alumni'
+
+
+admin.site.register(List)
 admin.site.register(Bubye, BubyeAdmin)
-
-
 # admin.site.register(Bubye)
