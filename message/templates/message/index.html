@@ -16,6 +16,7 @@
   <div id="items">
     <table align="center"><tr>
     {% for item in final_list %}
+        <td><a href="{{ item.id }}">{{ item.username }}</a></td></tr>
         <td><a href="{{ item.id }}">{{ item.name }}</a></td>
         {% if forloop.last %}
           </tr>
