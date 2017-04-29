@@ -1,0 +1,32 @@
+<html>
+<head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'message/style.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<title>
+  Adios Amigos
+</title>
+</head>
+<body>
+  <div id="maintitle">
+    Dear Seniors,<br>As you finish your jounery and move on to the next stage of your lives, we'd like to share our good wishes with you. Click on your name in the list below and login to view the wishes of your loving juniors :)
+  </div>
+{% if final_list %}
+  <div id="items">
+    <table align="center"><tr>
+    {% for item in final_list %}
+        <td><a href="{{ item.id }}">{{ item.name }}</a></td>
+        {% if forloop.last %}
+          </tr>
+        {% else %}
+          {% if forloop.counter|divisibleby:"3" %}
+            </tr><tr>
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+  </table>
+</div>
+{% endif %}
+</body>
+</html>
