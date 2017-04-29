@@ -19,13 +19,19 @@ body{
 a{
   font-size: 25;
 }
-#who{
+textarea{
   border: 3px;
   border-style: double;
   border-color: #EA7F31;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 input[type=submit]{
   margin-top: 10px;
   width: 20em;
   height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
