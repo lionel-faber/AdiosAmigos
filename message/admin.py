@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import List, Bubye
+from .models import  Bubye
+from django.contrib.auth.models import User
 
 class BubyeAdmin(admin.ModelAdmin):
     '''
@@ -9,10 +10,10 @@ class BubyeAdmin(admin.ModelAdmin):
     '''
     model = Bubye
     list_display = ('get_name','message')
-    list_filter = ('alumini__name',)
+    list_filter = ('alumini__username',)
     def get_name(self, obj):
-	       return obj.alumini.name
-    get_name.admin_order_field = 'alumni'
+		return obj.alumini.username
+    get_name.admin_order_field = 'alumni'	
     get_name.short_description = 'alumni'
 
 

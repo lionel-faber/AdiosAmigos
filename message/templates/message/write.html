@@ -4,10 +4,10 @@
   <link rel="stylesheet" type="text/css" href="{% static 'message/style.css' %}" />
 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <title>{{ item.name}}'s Corner</title>
+  <title>{{ item.first_name }}'s Corner</title>
 </head>
 <body>
-<h3 id="maintitle">Would you like to say something to {{ item.name }}?</h3>
+<h3 id="maintitle">Would you like to say something to {{ item.first_name }}?</h3>
 
 <form action="{% url 'submit' item.id %}" method="post">
 {% csrf_token %}
