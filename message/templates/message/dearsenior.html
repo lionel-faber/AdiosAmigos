@@ -10,23 +10,17 @@
 </head>
 <body>
   <div id="maintitle">
-    Dear Seniors,<br>As you finish your jounery and move on to the next stage of your lives, we'd like to share our good wishes with you. Click on your name in the list below and login to view the wishes of your loving juniors :)
+    Dear Seniors,<br>As you finish your jounery and move on to the next stage of your lives,<br> we'd like to share our good wishes with you.
   </div>
-{% if final_list %}
-  <div id="items">
-    <table align="center"><tr>
-    {% for item in final_list %}
-        <td><a href="{{ item.id }}">{{ item.name }}</a></td>
-        {% if forloop.last %}
-          </tr>
-        {% else %}
-          {% if forloop.counter|divisibleby:"3" %}
-            </tr><tr>
-          {% endif %}
-        {% endif %}
-    {% endfor %}
-  </table>
-</div>
-{% endif %}
+<br><br><br>
+    <table align="center">
+      <tr><td>
+        Is this the first time you are visiting?<br>
+<a href="reg">Sign Up</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+  Already registered?<br>
+<a href="login">Login</a>
+</td>
 </body>
 </html>

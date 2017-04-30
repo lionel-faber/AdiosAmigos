@@ -35,3 +35,13 @@ input[type=submit]{
   margin-right: auto;
   display: block;
 }
+h2{
+  text-align: center;
+}
+#instructions{
+  text-align: center;
+}
+table{
+  font-size: 25;
+  margin-top: 200;
+}
